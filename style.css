@@ -61,6 +61,7 @@ a {
   font-family: "Indie Flower", cursive;
   font-weight: 800;
   font-size: clamp(0.75rem, 2.5vw, 1.25rem);
+  -webkit-tap-highlight-color: transparent;
 }
 
 #reset:hover {
@@ -90,6 +91,7 @@ a {
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .box-1,
@@ -112,7 +114,6 @@ a {
 
 @media screen and (max-width: 768px) {
   .scoreboard-container {
-    margin-top: 40px;
     margin-bottom: 40px;
   }
   .github-corner {
