@@ -37,9 +37,9 @@ You need to have or install the following:
 
 - You can now open the app from the browser or go live using Live Server (by Ritwick Dey) VS Code extension if you are using this editor.
 
-<!-- #### Screenshot
+#### Screenshot
 
-![](./screenshot.png) -->
+![](./screenshot.png)
 
 #### Hosted web application<a name="hosted-app"></a>
 
