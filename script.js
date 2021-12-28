@@ -29,7 +29,6 @@ const handleTicTacToe = () => {
     });
 
     if (tracker.includes("X") || tracker.includes("O")) {
-      console.log(1);
       initialValue === "X" ? (initialValue = "O") : (initialValue = "X");
       boxValue = initialValue;
     }
