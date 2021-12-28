@@ -19,13 +19,21 @@ const handleTicTacToe = () => {
   let boxValue = "X";
   let tracker = new Array(9);
 
-  const updatePoints = (winnerVal) => {
-    if (winnerVal === "X") {
+  const updatePoints = (pos1, pos2, pos3) => {
+    if (tracker[pos1] === "X") {
+      console.log(score1.innerHTML);
       score1.innerHTML = Number(score1.innerHTML) + 1;
-    } else if (winnerVal === "O") {
-      score2.innerHTML = Number(score1.innerHTML) + 1;
+    } else if (tracker[pos1] === "O") {
+      score2.innerHTML = Number(score2.innerHTML) + 1;
     }
+    Swal.fire({
+      icon: "success",
+      title: "Win",
+      timer: "2250",
+      showConfirmButton: false,
+    });
   };
+
   const checkWinner = () => {
     console.log(tracker);
     if (
@@ -33,19 +41,20 @@ const handleTicTacToe = () => {
       tracker[0] === tracker[1] &&
       tracker[0] === tracker[2]
     ) {
-      updatePoints(tracker[0]);
-      Swal.fire({
-        icon: "success",
-        title: "Win",
-        timer: "2250",
-        showConfirmButton: false,
-      });
+      updatePoints(0, 1, 2);
+    } else if (
+      tracker[0] !== undefined &&
+      tracker[0] === tracker[3] &&
+      tracker[0] === tracker[6]
+    ) {
+      updatePoints(0, 3, 6);
     }
   };
 
   const attachBoxEventListener = (target) => {
     target.forEach((box, index) =>
       box.addEventListener("click", (event) => {
+        box.style.backgroundColor = "white";
         if (!box.innerHTML) {
           box.innerHTML = boxValue;
           tracker[index] = boxValue;
@@ -70,6 +79,19 @@ const handleTicTacToe = () => {
       box.innerHTML = "";
     });
     tracker = new Array(9);
+    if (boxValue === "X") {
+      Swal.fire({
+        icon: "success",
+        title: "Player 1 (X) starts now",
+        showConfirmButton: true,
+      });
+    } else {
+      Swal.fire({
+        icon: "success",
+        title: "Player 2 (O) starts now",
+        showConfirmButton: true,
+      });
+    }
   };
 
   const attachResetHandler = (target) => {
