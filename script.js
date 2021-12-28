@@ -35,7 +35,6 @@ const handleTicTacToe = () => {
     if (initialValue === "X") {
       setTimeout(() => {
         Swal.fire({
-          icon: "success",
           title: "Player X starts now",
           confirmButtonText: "Let's Go!",
           showConfirmButton: true,
@@ -44,7 +43,6 @@ const handleTicTacToe = () => {
     } else {
       setTimeout(() => {
         Swal.fire({
-          icon: "success",
           title: "Player O starts now",
           confirmButtonText: "Let's Go!",
           showConfirmButton: true,
@@ -63,7 +61,6 @@ const handleTicTacToe = () => {
     boxes[pos2].style.backgroundColor = "rgba(152,251,152,0.55)";
     boxes[pos3].style.backgroundColor = "rgba(152,251,152,0.55)";
     Swal.fire({
-      icon: "success",
       title: tracker[pos1] === "X" ? `Player X Wins` : `Player O Wins`,
       timer: "3050",
       showConfirmButton: false,
