@@ -21,8 +21,6 @@ const handleTicTacToe = () => {
   let tracker = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
   const resetAll = () => {
-    score1.innerHTML = 0;
-    score2.innerHTML = 0;
     boxes.forEach((box, index) => {
       box.innerHTML = "";
       box.style.backgroundColor = "white";
