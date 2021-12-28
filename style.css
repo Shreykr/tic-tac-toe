@@ -19,6 +19,20 @@ body {
   justify-content: center;
 }
 
+.github-corner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: scale(1.25);
+}
+
+a {
+  color: #1f74b6;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .main-container {
   display: flex;
   flex-direction: row;
@@ -36,7 +50,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 1.75rem;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 #reset {
