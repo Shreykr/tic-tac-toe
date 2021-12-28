@@ -191,6 +191,8 @@ const handleTicTacToe = () => {
   const attachResetHandler = (target) => {
     target.addEventListener("click", (event) => {
       resetAll();
+      score1.innerHTML = 0;
+      score2.innerHTML = 0;
     });
   };
 

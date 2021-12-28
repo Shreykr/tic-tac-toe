@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -18,11 +12,10 @@ body {
   font-family: "Indie Flower", cursive;
   font-weight: 700;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  min-width: 100vw;
 }
 
 .github-corner {
@@ -41,11 +34,9 @@ a {
 
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  min-height: 100vh;
 }
 
 .scoreboard-container {
@@ -53,9 +44,10 @@ a {
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgb(221, 209, 209), 0px 0px 20px rgb(238, 230, 230);
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 4.5vw, 1.55rem);
   margin-bottom: 80px;
 }
 
@@ -68,7 +60,7 @@ a {
   cursor: pointer;
   font-family: "Indie Flower", cursive;
   font-weight: 800;
-  font-size: 1.15rem;
+  font-size: clamp(0.75rem, 2.5vw, 1.25rem);
 }
 
 #reset:hover {
@@ -80,8 +72,8 @@ a {
 #game-container {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 190px);
-  grid-auto-rows: 190px;
+  grid-template-columns: repeat(3, clamp(6.5rem, 20.5vw, 10.75rem));
+  grid-auto-rows: clamp(6.5rem, 20.5vw, 10.75rem);
   border-radius: 10px;
 }
 
@@ -94,7 +86,7 @@ a {
 
 .box {
   padding: 20px 0;
-  font-size: 5.15rem;
+  font-size: clamp(2.75rem, 8.25vw, 4.25rem);
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -120,6 +112,17 @@ a {
 
 @media screen and (max-width: 768px) {
   .scoreboard-container {
-    margin-top: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .github-corner {
+    transform: scale(1);
   }
 }
+
+/* @media screen and (min-width: 769px) {
+  #game-container {
+    grid-template-columns: repeat(3, 10rem);
+    grid-auto-rows: 10rem;
+  }
+} */
