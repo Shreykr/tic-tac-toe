@@ -34,10 +34,7 @@ You need to have or install the following:
   git clone https://github.com/Shreykr/tic-tac-toe.git
   ```
 - Navigate to project folder
-- Run installation
-  ```
-  npm install
-  ```
+
 - You can now open the app from the browser or go live using Live Server (by Ritwick Dey) VS Code extension if you are using this editor.
 
 <!-- #### Screenshot
