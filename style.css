@@ -119,10 +119,3 @@ a {
     transform: scale(1);
   }
 }
-
-/* @media screen and (min-width: 769px) {
-  #game-container {
-    grid-template-columns: repeat(3, 10rem);
-    grid-auto-rows: 10rem;
-  }
-} */
