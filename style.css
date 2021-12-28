@@ -50,7 +50,7 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: clamp(1.15rem, 4.5vw, 1.55rem);
-  margin-bottom: 80px;
+  margin-top: 80px;
 }
 
 #reset {
@@ -117,7 +117,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .scoreboard-container {
-    margin-bottom: 40px;
+    margin-top: 40px;
   }
   .github-corner {
     transform: scale(1);
