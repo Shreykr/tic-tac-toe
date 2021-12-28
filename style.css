@@ -17,6 +17,9 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .github-corner {
@@ -24,6 +27,7 @@ body {
   top: 0;
   right: 0;
   transform: scale(1.25);
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -90,9 +94,6 @@ a {
 .box {
   padding: 20px 0;
   font-size: clamp(2.75rem, 8.25vw, 4.25rem);
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
   -webkit-tap-highlight-color: transparent;
   font-family: "Indie Flower", cursive;
 }

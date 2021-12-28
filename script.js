@@ -9,6 +9,15 @@ const resetButtonAnimationHandler = () => {
   resetButtonState.addEventListener("mouseleave", function () {
     this.style.transform = "scale(1)";
   });
+  resetButtonState.addEventListener("touchstart", function () {
+    this.style.transform = "scale(0.8)";
+  });
+  resetButtonState.addEventListener("touchend", function () {
+    this.style.transform = "scale(1)";
+  });
+  resetButtonState.addEventListener("touchmove", function () {
+    this.style.transform = "scale(1)";
+  });
 };
 
 const handleTicTacToe = () => {
