@@ -111,3 +111,9 @@ a {
 .box-8 {
   border-right: 2px solid black;
 }
+
+@media screen and (max-width: 768px) {
+  .scoreboard-container {
+    margin-top: 80px;
+  }
+}
